@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emojify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJw-sE-Gpx" userLabel="Container View">
+                                <rect key="frame" x="16" y="113.5" width="343" height="440"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb5-eD-cjc">
+                                        <rect key="frame" x="0.0" y="200" width="343" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.25098039215686274" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="sen-QU-nI9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="tintColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Emojify😉">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8w-R2-72L">
+                                        <rect key="frame" x="0.0" y="256" width="343" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="9rv-OC-SMn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="emojiTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the text to Emojify" textAlignment="justified" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="OLf-h0-eWo">
+                                        <rect key="frame" x="0.0" y="144" width="343" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Spr-vM-IuG"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="440" id="6nN-p0-X8m"/>
+                                    <constraint firstItem="fb5-eD-cjc" firstAttribute="top" secondItem="OLf-h0-eWo" secondAttribute="bottom" constant="16" id="Lhs-p6-ng3"/>
+                                    <constraint firstAttribute="trailing" secondItem="OLf-h0-eWo" secondAttribute="trailing" id="PMb-oa-kPK"/>
+                                    <constraint firstItem="OLf-h0-eWo" firstAttribute="leading" secondItem="wJw-sE-Gpx" secondAttribute="leading" id="PY0-8f-Sfx"/>
+                                    <constraint firstItem="y8w-R2-72L" firstAttribute="top" secondItem="fb5-eD-cjc" secondAttribute="bottom" constant="16" id="SCf-Us-iqo"/>
+                                    <constraint firstItem="y8w-R2-72L" firstAttribute="leading" secondItem="wJw-sE-Gpx" secondAttribute="leading" id="aaD-AJ-Jnc"/>
+                                    <constraint firstItem="fb5-eD-cjc" firstAttribute="top" secondItem="OLf-h0-eWo" secondAttribute="bottom" constant="16" id="bHQ-Mp-sT0"/>
+                                    <constraint firstItem="fb5-eD-cjc" firstAttribute="centerX" secondItem="wJw-sE-Gpx" secondAttribute="centerX" id="izc-I1-LMr"/>
+                                    <constraint firstAttribute="trailing" secondItem="fb5-eD-cjc" secondAttribute="trailing" id="ohv-Dd-XCu"/>
+                                    <constraint firstAttribute="trailing" secondItem="y8w-R2-72L" secondAttribute="trailing" id="osX-L6-NBp"/>
+                                    <constraint firstItem="fb5-eD-cjc" firstAttribute="leading" secondItem="wJw-sE-Gpx" secondAttribute="leading" id="qUX-a9-yQq"/>
+                                    <constraint firstItem="fb5-eD-cjc" firstAttribute="centerY" secondItem="wJw-sE-Gpx" secondAttribute="centerY" id="t85-cf-mcE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wJw-sE-Gpx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BPn-L5-tJc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wJw-sE-Gpx" secondAttribute="trailing" constant="16" id="C2y-L0-GW8"/>
+                            <constraint firstItem="wJw-sE-Gpx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iqA-jI-YaY"/>
+                            <constraint firstItem="wJw-sE-Gpx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ojp-36-Bvo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emojiTextField" destination="OLf-h0-eWo" id="3jX-8b-sAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

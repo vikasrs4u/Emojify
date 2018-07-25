@@ -8,10 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var emojiTextField: UITextField!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        self.emojiTextField.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +25,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // function to hide the keyboard on enter click
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 
 }
 
