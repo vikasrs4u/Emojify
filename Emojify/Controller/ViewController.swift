@@ -109,7 +109,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func updateUIWithEmojiData()
     {
         emojiOutputDataLabel.text = emojiDataModel.text
+        
+        UIPasteboard.general.string = emojiDataModel.text
+        
+        emojiTextField.text = ""
 
+        let alertController = UIAlertController(title:"Emojifyed data is copied to the clipboard",message:nil,preferredStyle:.alert)
+        self.present(alertController,animated:true,completion:{Timer.scheduledTimer(withTimeInterval: 2, repeats:false, block: {_ in
+            self.dismiss(animated: true, completion: nil)
+        })})
     }
 
 }

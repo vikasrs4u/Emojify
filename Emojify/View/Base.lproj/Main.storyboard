@@ -36,7 +36,7 @@
                                             <action selector="emojifyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYl-ON-kJn"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8w-R2-72L">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8w-R2-72L">
                                         <rect key="frame" x="0.0" y="256" width="343" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="9rv-OC-SMn"/>
