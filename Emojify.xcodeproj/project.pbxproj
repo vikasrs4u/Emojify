@@ -12,6 +12,7 @@
 		1D7B57D42107EF610039B418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B57D22107EF610039B418 /* Main.storyboard */; };
 		1D7B57D62107EF650039B418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B57D52107EF650039B418 /* Assets.xcassets */; };
 		1D7B57D92107EF650039B418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7B57D72107EF650039B418 /* LaunchScreen.storyboard */; };
+		1DE6D5A221082C8400012DCA /* EmojiDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE6D5A121082C8400012DCA /* EmojiDataModel.swift */; };
 		90AD160650B4D9E64A16F429 /* Pods_Emojify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F8EFA6C13644BEC74355B6 /* Pods_Emojify.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		1D7B57D52107EF650039B418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D7B57D82107EF650039B418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D7B57DA2107EF650039B418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DE6D5A121082C8400012DCA /* EmojiDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDataModel.swift; sourceTree = "<group>"; };
 		2CD086DC4058D95D49D3DB6B /* Pods-Emojify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emojify/Pods-Emojify.release.xcconfig"; sourceTree = "<group>"; };
 		74F8EFA6C13644BEC74355B6 /* Pods_Emojify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emojify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9335A5D4C0D6E69536BF5B0 /* Pods-Emojify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emojify/Pods-Emojify.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,14 +63,39 @@
 		1D7B57CD2107EF610039B418 /* Emojify */ = {
 			isa = PBXGroup;
 			children = (
-				1D7B57CE2107EF610039B418 /* AppDelegate.swift */,
-				1D7B57D02107EF610039B418 /* ViewController.swift */,
-				1D7B57D22107EF610039B418 /* Main.storyboard */,
+				1DE6D59E21082BDD00012DCA /* Controller */,
+				1DE6D59D21082BBC00012DCA /* View */,
+				1DE6D59C21082BAD00012DCA /* Model */,
 				1D7B57D52107EF650039B418 /* Assets.xcassets */,
 				1D7B57D72107EF650039B418 /* LaunchScreen.storyboard */,
 				1D7B57DA2107EF650039B418 /* Info.plist */,
 			);
 			path = Emojify;
+			sourceTree = "<group>";
+		};
+		1DE6D59C21082BAD00012DCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DE6D5A121082C8400012DCA /* EmojiDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DE6D59D21082BBC00012DCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B57D22107EF610039B418 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DE6D59E21082BDD00012DCA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B57CE2107EF610039B418 /* AppDelegate.swift */,
+				1D7B57D02107EF610039B418 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		838EFA3472BFBC84FFDE440F /* Pods */ = {
@@ -204,6 +231,7 @@
 			files = (
 				1D7B57D12107EF610039B418 /* ViewController.swift in Sources */,
 				1D7B57CF2107EF610039B418 /* AppDelegate.swift in Sources */,
+				1DE6D5A221082C8400012DCA /* EmojiDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
